@@ -1,0 +1,136 @@
+:root {
+  --text: #222;
+  --muted: #666;
+  --line: #ccc;
+  --accent: #8b1a2b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eee;
+  color: var(--text);
+  font: 16px/1.6 Arial, Helvetica, sans-serif;
+}
+
+.cv {
+  max-width: 800px;
+  margin: 24px auto;
+  padding: 40px 48px;
+  background: #fff;
+}
+
+/* Header */
+.head {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--text);
+}
+
+.head p {
+  margin: 2px 0;
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: 2rem;
+  color: var(--accent);
+}
+
+.role {
+  font-weight: bold;
+}
+
+.contact {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.photo {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+}
+
+/* Isi */
+section {
+  margin-top: 24px;
+}
+
+h2 {
+  margin: 0 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+p {
+  margin: 0 0 6px;
+}
+
+.item {
+  margin-bottom: 12px;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.line span {
+  color: var(--muted);
+}
+
+.data {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 4px 12px;
+  margin: 0;
+}
+
+.data dt {
+  font-weight: bold;
+}
+
+.data dd {
+  margin: 0;
+}
+
+/* HP */
+@media (max-width: 600px) {
+  .cv {
+    margin: 0;
+    padding: 24px 18px;
+  }
+
+  .head {
+    flex-direction: column-reverse;
+  }
+
+  .photo {
+    width: 120px;
+    height: 160px;
+  }
+}
+
+/* Cetak */
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .cv {
+    margin: 0;
+    padding: 0;
+  }
+}
